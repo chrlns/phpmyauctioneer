@@ -2,7 +2,7 @@ phpMyAuctioneer
 ---------------
 
 This system was created in the first year of my studies at the University of
-Applied Sciences in Osnabrück as a homework (a few years agp).
+Applied Sciences in Osnabrück as a homework (a few years ago).
 It works but it is not production ready from a security perspective. Work must
 be done on the SQL injection problems.
 

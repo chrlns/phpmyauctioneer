@@ -1,0 +1,81 @@
+body	
+{
+  font-family: Bitstream Vera Sans, Verdana, Arial, Helvetica;
+  font-size: 12px;
+  color: black;
+  padding-left: 25px;
+}
+
+table
+{
+  padding: 10px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+td
+{
+  vertical-align: top;
+}
+
+td.yellow
+{
+  background-color: yellow;
+  padding: 4px;
+  border: 1px solid blue;
+}
+
+td.menu
+{
+  padding: 8px;
+  border: 1px solid black;
+}
+
+p.huge
+{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+p.small
+{
+  font-size: 10px;
+}
+
+p.greybackground
+{
+	background-color: #dddddd;
+}
+
+a
+{
+  color: black;
+  font-weight: bold;
+  padding: 2px;
+}
+
+textarea
+{
+  background-color: #DDDDDD;
+}
+
+input
+{
+  background-color: #DDDDDD;
+}
+
+a:hover	
+{
+	color: yellow;
+	background-color: blue; 
+}
+
+a:link	
+{
+	text-decoration: none; 
+}
+
+a:visited 
+{
+	text-decoration: none; 
+}

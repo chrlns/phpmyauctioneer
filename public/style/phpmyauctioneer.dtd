@@ -1,0 +1,18 @@
+<!ELEMENT page (logo, menu, content)>
+
+<!ELEMENT logo>
+<!ATTLIST
+  url CDATA #REQUIRED
+>
+
+<!ELEMENT menu (menuentry)*>
+
+<!ELEMENT menuentry (#PCDATA)>
+<!ATTLIST
+  text CDATA #REQUIRED
+  url  CDATA #REQUIRED
+>
+
+<!ELEMENT content (text)*>
+
+<!ELEMENT text (#PCDATA)>

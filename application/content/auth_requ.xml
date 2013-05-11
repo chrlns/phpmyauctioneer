@@ -1,0 +1,11 @@
+<text>
+Um die gewünschte Aktion auszuführen ist Ihre Authentifizierung als angemeldeter Benutzer notwendig.
+</text>
+<text>
+Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein:
+</text>
+<form url="login_exec">
+<input type="text" name="username" text="Benutzername" />
+<input type="password" name="password" text="Passwort" />
+<submit text="Anmelden" />
+</form>

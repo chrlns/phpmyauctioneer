@@ -1,0 +1,9 @@
+<text class="huge">
+Willkommen bei phpMyAuctioneer!
+</text>
+<text>
+Sie können hier Waren aller Art ver- oder ersteigern und das ein oder andere Schnäppchen ergattern.
+</text>
+<text>Um einen Artikel zu finden, stöbern Sie einfach in einer der Kategorien. 
+Falls Sie mitbieten möchten, müssen Sie als User <link url="signup">registriert</link> und <link url="auth_requ">eingeloggt</link> sein.
+</text>

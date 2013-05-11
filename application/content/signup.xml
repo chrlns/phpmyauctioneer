@@ -1,0 +1,17 @@
+<text class="huge">
+Benutzerregistrierung
+</text>
+<text>
+Falls Sie schon registriert sind können Sie sich <link url="auth_requ">hier einloggen</link>!
+</text>
+
+<form url="signup_exec">
+<input type="text" name="firstname" text="Vorname" />
+<input type="text" name="lastname" text="Nachname" />
+<input type="text" name="street" text="Straße" />
+<input type="text" name="zip" text="PLZ" />
+<input type="text" name="city" text="Stadt" />
+<input type="text" name="username" text="Username" />
+<input type="text" name="email" text="E-Mail" />
+<submit text="Anmelden" />
+</form>

@@ -17,18 +17,13 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// Diese Klasse stellt Funktionen zur Anbindung an die MySQL-Datenbank bereit
+include("db.inc");
+
 class CDatabase
 {
-    // Globale Verbindungsparameter
-    var $Host     = "localhost";
-    var $Database = "netvadenet43";
-    var $User     = "netvadenet43";
-    var $Password = "74KS9Jok";
     var $QueryID;
     var $ConnectionID;
 
-    // Konstruktor
     function CDatabase()
     {
         $this->Connect();
@@ -41,8 +36,12 @@ class CDatabase
 
     function Connect()
     {
-        $this->ConnectionID = mysql_pconnect($this->Host, $this->User, $this->Password);
-        mysql_select_db($this->Database);
+        //$pdo = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+        $this->ConnectionID = mysql_pconnect(DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD);
+        if(!$this->ConnectionID || !mysql_select_db(DATABASE_NAME, $this->ConnectionID)) {
+            echo "<text>CDatabase::Connect: " . mysql_error() . "</text>";
+            echo "<text>" . DATABASE_NAME . "</text>";
+        }
     }
 
     function Query($query)

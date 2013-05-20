@@ -1,0 +1,6 @@
+<?php 
+define("DATABASE_HOST", "localhost");
+define("DATABASE_NAME", "phpmyauctioneer");
+define("DATABASE_USER", "phpmyauctioneer");
+define("DATABASE_PASSWORD", "mySeCret");
+?>

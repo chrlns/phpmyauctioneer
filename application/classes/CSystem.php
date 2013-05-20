@@ -99,7 +99,7 @@ class CSystem
         $result = $this->Database->Query("DELETE FROM phpmyauctioneer_session WHERE created < '" . intval(time() - 15*60) . "'");
 
         if(!$result)
-            echo "<text>" . mysql_error() . "</text>";
+            echo "<text>CSystem::CheckSession: " . mysql_error() . "</text>";
         	
         $this->Database->Query("SELECT * FROM phpmyauctioneer_session WHERE id ='" . $this->Session . "'");
         $result = $this->Database->GetResultArray();
@@ -129,7 +129,7 @@ class CSystem
         $result = $this->Database->Query("DELETE FROM phpmyauctioneer_auction WHERE ends > '" . intval(time() + 60*60*24*14) . "' AND status <> 'running';");
         if(!$result)
         {
-            echo "<text>" . mysql_error() . "</text>";
+            echo "<text>CSystem::CheckAuction: " . mysql_error() . "</text>";
         }
         	
         // Beenden von Auktionen

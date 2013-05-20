@@ -17,7 +17,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-header("Content-Type: text/xml");
+header("Content-Type: text/xsl");
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
 
 $User    = $HTTP_GET_VARS['user'];

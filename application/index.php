@@ -27,11 +27,8 @@ $Username = $HTTP_GET_VARS['user'];
 if(empty($Username))
     $Username = $HTTP_POST_VARS['user'];
 
-// XML-Header, der per echo-Anweisung ausgegeben wird, da er sonst mit den PHP
-// ins Gehege kommt.
-echo "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\"?>\n";
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n";
 
-// Wir m�ssen hier leider eine Unterscheidung zwischen dem Internet Explorer und anderen Browsern machen
 if(substr_count(getenv("HTTP_USER_AGENT"), "IE") > 0 || substr_count(getenv("HTTP_USER_AGENT"), "Internet Explorer") > 0)
     echo "<?xml-stylesheet type=\"text/xsl\" href=\"style/style.php?session=" . $Session . "&amp;user=" . $Username . "\" ?>\n";
 else // Nur das & vs. &amp; macht den Unterschied
@@ -40,14 +37,12 @@ else // Nur das & vs. &amp; macht den Unterschied
 require_once("classes/CPage.php");
 require_once("classes/CSystem.php");
 
-// Erstelle ben�tigte Klasseninstanzen
 $System = new CSystem($HTTP_GET_VARS, $HTTP_POST_VARS);
-$Page    = new CPage($System);
+$Page   = new CPage($System);
 ?>
 <page> <logo url="images/logo.png" />
 <menu>
 	<?php
-	// Eintr�ge des Men�s aus der Datenbank auslesen
 	$Page->Menu->GetEntries();
 	?>
 </menu>
@@ -55,7 +50,7 @@ $Page    = new CPage($System);
 <content> <?php
 // Inhalt der Seite einlesen
 $Page->GetContent();
-?> </content> <text class="small">Copyright &copy; 2006,2013 by
+?> </content> <text class="small">Copyright &amp;copy; 2006,2013 by
 Christian Lins. The source of this system is released under AGPL.</text>
 </page>
 <?php

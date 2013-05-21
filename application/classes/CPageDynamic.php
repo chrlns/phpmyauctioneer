@@ -105,7 +105,7 @@ class CPageDynamic
         if($result['password'] == $password)
         {
             $session = md5(rand());
-            $this->Database->Query("INSERT INTO afoot_session
+            $this->Database->Query("INSERT INTO phpmyauctioneer_session
                     VALUES ('" . time() . "', '". $session . "', '" . getenv("REMOTE_ADDR") . "' ,'" . $username . "')");
 
             echo "<text>Hallo, $username!</text>";
@@ -165,7 +165,7 @@ class CPageDynamic
             if(!$errorOccured)  // Es ist kein kein Fehler bis jetzt aufgetreten...
             {
                 $newID = rand();
-                $return = $this->Database->Query("INSERT INTO afoot_auction
+                $return = $this->Database->Query("INSERT INTO phpmyauctioneer_auction
                         (name, category, description, start_bid, starts, ends, pid, status, seller) VALUES
                         ('".$this->System->PostVars['auction_title']."',
                         '".$this->System->PostVars['auction_category']."',
@@ -262,10 +262,10 @@ class CPageDynamic
                 echo "<text>Es wurde eine Nachricht an Ihre E-Mail-Adresse geschickt!</text>";
                 echo "<text>Sie enthält ein vorläufiges Passwort und weitere Informationen.</text>";
 
-                $msg = "Vielen Dank für Ihre Anmeldung bei Afoot!\n\n";
+                $msg = "Vielen Dank für Ihre Anmeldung bei phpMyAuctioneer!\n\n";
                 $msg .= "Ihr vorläufiges Passwort: $randomPassword";
 
-                mail($this->System->PostVars['email'], "Anmeldung bei Afoot", $msg);
+                mail($this->System->PostVars['email'], "Anmeldung bei phpMyAuctioneer", $msg);
             }
             else
             {

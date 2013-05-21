@@ -19,25 +19,22 @@
 
 header("Content-Type: text/xml");
 
-$Session = $HTTP_GET_VARS['session'];
-if(empty($Session))
-    $Session = $HTTP_POST_VARS['session'];
-
-$Username = $HTTP_GET_VARS['user'];
-if(empty($Username))
-    $Username = $HTTP_POST_VARS['user'];
+$Session = $_GET['session'];
+if(empty($Session)) {
+    $Session = $_POST['session'];
+}
+$Username = $_GET['user'];
+if(empty($Username)) {
+    $Username = $_POST['user'];
+}
 
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n";
-
-if(substr_count(getenv("HTTP_USER_AGENT"), "IE") > 0 || substr_count(getenv("HTTP_USER_AGENT"), "Internet Explorer") > 0)
-    echo "<?xml-stylesheet type=\"text/xsl\" href=\"style/style.php?session=" . $Session . "&amp;user=" . $Username . "\" ?>\n";
-else // Nur das & vs. &amp; macht den Unterschied
-    echo "<?xml-stylesheet type=\"text/xsl\" href=\"style/style.php?session=" . $Session . "&user=" . $Username . "\" ?>\n";
+echo "<?xml-stylesheet type=\"text/xsl\" href=\"style/style.php?session=" . $Session . "&amp;user=" . $Username . "\" ?>\n";
 
 require_once("classes/CPage.php");
 require_once("classes/CSystem.php");
 
-$System = new CSystem($HTTP_GET_VARS, $HTTP_POST_VARS);
+$System = new CSystem($_GET, $_POST);
 $Page   = new CPage($System);
 ?>
 <page> <logo url="images/logo.png" />
@@ -50,7 +47,7 @@ $Page   = new CPage($System);
 <content> <?php
 // Inhalt der Seite einlesen
 $Page->GetContent();
-?> </content> <text class="small">Copyright &amp;copy; 2006,2013 by
+?> </content> <text class="small">Copyright &#169; 2006,2013 by
 Christian Lins. The source of this system is released under AGPL.</text>
 </page>
 <?php

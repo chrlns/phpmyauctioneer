@@ -25,7 +25,9 @@ require_once("CPageStatic.php");
 require_once("CPageAuction.php");
 require_once("CPageList.php");
 
-// Diese Klasse stellt Funktionen f�r das Bereitstellen des Seiteninhalts bereit.
+/**
+ * A page and its content.
+ */
 class CPage
 {
     var $System;
@@ -61,7 +63,7 @@ class CPage
 
         echo "<column>";
 
-        // Categorieanzeige auf der linken Seite
+        // Category view on the left
         $this->CategoryList->GetCategories(0);
 
         echo "</column>";

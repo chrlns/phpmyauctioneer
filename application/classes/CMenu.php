@@ -19,7 +19,9 @@
 
 require_once("CDatabase.php");
 
-// Diese Klasse liest die ben�tigten Navigationsmen�eintr�ge aus der Datenbank
+/**
+ * Reads navigation elements from the database
+ */
 class CMenu
 {
     var $Database;

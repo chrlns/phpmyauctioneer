@@ -1,7 +1,7 @@
 <?php
 /*
  *   phpMyAuctioneer
- *   Copyright (C) 2006,2013  by Christian Lins <christian@lins.me>
+ *   Copyright (C) 2006-2014 by Christian Lins <christian@lins.me>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Affero General Public License as
@@ -19,7 +19,9 @@
 
 require_once("CDatabase.php");
 
-// Diese Klasse stellt Funktionen f�r die Kategorieanzeige zur Verf�gung
+/**
+ * Represents the category list
+ */
 class CCategoryList
 {
     var $Database;

@@ -84,6 +84,7 @@ CREATE TABLE phpmyauctioneer_menu (
     name varchar(10),
     position tinyint(4),
     title varchar(25),
+    min_auth_level tinyint(8),
     PRIMARY KEY (name)
 );
 

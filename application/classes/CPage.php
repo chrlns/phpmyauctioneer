@@ -1,7 +1,7 @@
 <?php
 /*
  *   phpMyAuctioneer
- *   Copyright (C) 2006,2013  by Christian Lins <christian@lins.me>
+ *   Copyright (C) 2006-2015  by Christian Lins <christian@lins.me>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Affero General Public License as

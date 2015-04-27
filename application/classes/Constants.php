@@ -1,7 +1,7 @@
 <?php
 /*
  *   phpMyAuctioneer
- *   Copyright (C) 2006,2013  by Christian Lins <christian@lins.me>
+ *   Copyright (C) 2006-2015  by Christian Lins <christian@lins.me>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Affero General Public License as
@@ -17,8 +17,8 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-    $AUTHENTIFICATION_GUEST = 0;
-    $AUTHENTIFICATION_USER	= 1;
+    $AUTHENTIFICATION_GUEST      = 0;
+    $AUTHENTIFICATION_USER       = 1;
     $AUTHENTIFICATION_USER_OWNER = 2;
-    $AUTHENTIFICATION_ADMIN = 255;
+    $AUTHENTIFICATION_ADMIN      = 255;
 ?>

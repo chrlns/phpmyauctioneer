@@ -1,7 +1,7 @@
 <?php
 /*
  *   phpMyAuctioneer
- *   Copyright (C) 2006,2013  by Christian Lins <christian@lins.me>
+ *   Copyright (C) 2006-2015  by Christian Lins <christian@lins.me>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Affero General Public License as
@@ -47,7 +47,7 @@ $Page   = new CPage($System);
 <content> <?php
 // Inhalt der Seite einlesen
 $Page->GetContent();
-?> </content> <text class="small">Copyright &#169; 2006,2013 by
+?> </content> <text class="small">Copyright &#169; 2006-2015 by
 Christian Lins. The source of this system is released under AGPL.</text>
 </page>
 <?php

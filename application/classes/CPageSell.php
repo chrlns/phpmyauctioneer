@@ -1,7 +1,7 @@
 <?php
 /*
  *   phpMyAuctioneer
- *   Copyright (C) 2006,2013  by Christian Lins <christian@lins.me>
+ *   Copyright (C) 2006-2015  by Christian Lins <christian@lins.me>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Affero General Public License as
@@ -45,8 +45,9 @@ class CPageSell
         $this->Database->Query("SELECT * FROM phpmyauctioneer_category ORDER BY caption ASC");
 
         $categories = "<option>Bitte wählen</option>";
-        while($q = $this->Database->GetResultArray())
+        while($q = $this->Database->GetResultArray()) {
             $categories .= "<option value=\"" . $q['id'] . "\">" . $q['caption'] . "</option>\n";
+        }
 
         $categories = "<select name=\"auction_category\" text=\"Kategorie\">" . $categories . "</select>";
 

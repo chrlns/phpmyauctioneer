@@ -1,7 +1,7 @@
 <?php
 /*
  *   phpMyAuctioneer
- *   Copyright (C) 2006,2013  by Christian Lins <christian@lins.me>
+ *   Copyright (C) 2006-2015  by Christian Lins <christian@lins.me>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Affero General Public License as
@@ -34,17 +34,17 @@ class CPageStatic
     function GetContent()
     {
         $file = file("content/" . $this->System->Content . ".xml");
-        if(empty($file))
+        if(empty($file)) {
             echo "<text>Die gewünschte Seite " . $this->System->Content . " konnte leider nicht gefunden werden!</text>";
-        else
-        {
+        } else {
             if($this->System->Authentification < $result['authentification'])
             {
                 $file = file("content/auth_requ.xml");
             }
             	
-            foreach($file as $line)
+            foreach($file as $line) {
                 echo $line;
+            }
         }
     }
 

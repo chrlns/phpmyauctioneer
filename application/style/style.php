@@ -76,7 +76,7 @@ $Session = $HTTP_GET_VARS['session'];
   <td>
   <xsl:attribute name="class"><xsl:value-of select="@class" /></xsl:attribute>
   <a>
-  <xsl:attribute name="href">index.php?content=<xsl:value-of select="@url" />&amp;session=<? echo $Session; ?>&amp;user=<? echo $User; ?></xsl:attribute>
+  <xsl:attribute name="href">index.php?content=<xsl:value-of select="@url" />&amp;session=<?php echo $Session; ?>&amp;user=<?php echo $User; ?></xsl:attribute>
   <xsl:value-of select="@text" />
   </a>
   </td>
@@ -84,7 +84,7 @@ $Session = $HTTP_GET_VARS['session'];
 
 <xsl:template match="link">
   <a>
-  <xsl:attribute name="href">index.php?content=<xsl:value-of select="@url" />&amp;session=<? echo $Session; ?>&amp;user=<? echo "$User"; ?></xsl:attribute>
+  <xsl:attribute name="href">index.php?content=<xsl:value-of select="@url" />&amp;session=<?php echo $Session; ?>&amp;user=<?php echo "$User"; ?></xsl:attribute>
   <xsl:apply-templates />
   </a>
 </xsl:template>
@@ -127,8 +127,8 @@ $Session = $HTTP_GET_VARS['session'];
 
 <xsl:template match="form">
   <form method="POST" action="index.php">
-  <input type="hidden" name="session" value="<? echo $Session; ?>" />
-  <input type="hidden" name="user" value="<? echo $User; ?>" />
+  <input type="hidden" name="session" value="<?php echo $Session; ?>" />
+  <input type="hidden" name="user" value="<?php echo $User; ?>" />
   <input type="hidden" name="content">
     <xsl:attribute name="value"><xsl:value-of select="@url" /></xsl:attribute>
   </input>

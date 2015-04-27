@@ -35,7 +35,7 @@ class CMenu
 
     function GetEntries()
     {
-        $this->Database->Query("SELECT * FROM phpmyauctioneer_menu WHERE hidefor != " . $this->System->Authentification . " ORDER BY position ASC");
+        $this->Database->Query("SELECT * FROM phpmyauctioneer_menu WHERE min_auth_level >= " . $this->System->Authentification . " ORDER BY position ASC");
 
         while($q = $this->Database->GetResultArray())
         {
